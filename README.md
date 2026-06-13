@@ -33,7 +33,7 @@ ghcr.io/kontrolplane/network:latest
 Run an ephemeral debug pod:
 
 ```sh
-kubectl run netdebug --rm -it --restart=Never \
+kubectl run debug --rm -it --restart=Never \
   --image=ghcr.io/kontrolplane/network:latest -- bash
 ```
 
