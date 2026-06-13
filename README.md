@@ -18,14 +18,6 @@ connectivity, DNS, routing and packet issues.
 
 Per-tool usage notes and examples live in [`documentation/`](documentation/README.md).
 
-## Image
-
-Published to GitHub Container Registry on every push to `main` and on `v*` tags:
-
-```
-ghcr.io/kontrolplane/network:latest
-```
-
 ## Usage
 
 ### Kubernetes
