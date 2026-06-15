@@ -1,4 +1,4 @@
-# network-toolbox
+# debug
 
 A throwaway container packed with common network troubleshooting tools, meant
 to be injected into a Kubernetes cluster or a plain Linux host to diagnose
@@ -26,32 +26,32 @@ Run an ephemeral debug pod:
 
 ```sh
 kubectl run debug --rm -it --restart=Never \
-  --image=ghcr.io/kontrolplane/network:latest -- bash
+  --image=ghcr.io/kontrolplane/debug:latest -- bash
 ```
 
 Attach to an existing pod's network namespace with `kubectl debug`:
 
 ```sh
-kubectl debug -it <pod> --image=ghcr.io/kontrolplane/network:latest \
+kubectl debug -it <pod> --image=ghcr.io/kontrolplane/debug:latest \
   --target=<container> -- bash
 ```
 
 Inspect a node:
 
 ```sh
-kubectl debug node/<node> -it --image=ghcr.io/kontrolplane/network:latest
+kubectl debug node/<node> -it --image=ghcr.io/kontrolplane/debug:latest
 ```
 
 ### Docker
 
 ```sh
 docker run --rm -it --network host \
-  ghcr.io/kontrolplane/network:latest bash
+  ghcr.io/kontrolplane/debug:latest bash
 ```
 
 ## Local build
 
 ```sh
-docker build -t network-toolbox .
-docker run --rm -it network-toolbox bash
+docker build -t debug .
+docker run --rm -it debug bash
 ```

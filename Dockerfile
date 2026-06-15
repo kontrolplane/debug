@@ -6,9 +6,9 @@
 
 FROM debian:bookworm-slim
 
-LABEL org.opencontainers.image.title="network-toolbox" \
+LABEL org.opencontainers.image.title="debug" \
       org.opencontainers.image.description="Container packed with network debugging tools for Kubernetes and Linux." \
-      org.opencontainers.image.source="https://github.com/kontrolplane/network"
+      org.opencontainers.image.source="https://github.com/kontrolplane/debug"
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -46,6 +46,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     jq \
     procps \
     iptables \
+    tmux \
     vim-tiny \
     less \
     ca-certificates \

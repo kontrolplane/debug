@@ -1,7 +1,7 @@
 # Documentation
 
 Usage notes and practical examples for every tool bundled in the
-network-toolbox image. Grouped by purpose.
+debug image. Grouped by purpose.
 
 | Guide | Tools covered |
 | --- | --- |
